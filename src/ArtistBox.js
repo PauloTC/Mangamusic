@@ -14,7 +14,7 @@ export default class ArtistBox extends React.Component {
     const {image , name , likes , coments} = this.props.artist
 
     return (
-      
+
         <View style={styles.artistBox}>
           <Image style={styles.image} source={{ uri: image }} />
           <View style={styles.info}  >
@@ -26,7 +26,7 @@ export default class ArtistBox extends React.Component {
               </View>
               <View style={styles.iconContainer}>
                 <Icon name="ios-chatboxes-outline" size={30} color="gray" />
-                <Text style={styles.count} >{likes}</Text>            
+                <Text style={styles.count} >{likes}</Text>
               </View>
             </View>
           </View>

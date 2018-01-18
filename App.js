@@ -2,6 +2,7 @@ import React from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 import ArtistBox from './src/ArtistBox'
 import ArtistList from './src/ArtistList'
+import {getArtists } from './src/api-client'
 
 import { 
   StyleSheet, 
@@ -9,22 +10,32 @@ import {
 } from 'react-native';
 
 export default class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      artists: []
+    }
+
+  }
+
+  componentDidMount(){
+    getArtists().then(data => this.setState({ 
+      artists:data
+    })  )
+  }
+
   render() {
+      // console.warn('data', this.state.artists )
 
-      const artist = {
-        image : 'https://static.platzi.com/media/avatars/PauloT_4080475c-42d0-4ab3-adae-3750a6db40a4.jpg',
-        name : 'Paulo Tejada',
-        likes: 250,
-        coments: 140
-      }
+      const artists = this.state.artists
 
-      const artists= Array(2).fill(artist)
-   
       return (
         <View style={styles.container} >
-          <ArtistList artists={artists} artist={artist} />
+          <ArtistList artists={artists}  />
         </View>
-        
+
       );
     }
   }

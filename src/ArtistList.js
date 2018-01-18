@@ -1,37 +1,20 @@
 import React from 'react';
 import ArtistBox from './ArtistBox'
-import { 
-  StyleSheet, 
-  Image,
-  FlatList,
+import {
+  FlatList
 } from 'react-native';
 
 export default class ArtistList extends React.Component {
-  constructor(props){
-    super(props);
-
-    this.state= {
-
-    }
-
-  }
+    
   render() {
    
     return (
 
       <FlatList
       data={this.props.artists}
-      renderItem={({item}) =><ArtistBox artist={this.props.artist}  />}
+      renderItem={({item}) =><ArtistBox artist={item}  />}
       />
       
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'lightgray',
-    paddingTop: 50,
-  },
-});
