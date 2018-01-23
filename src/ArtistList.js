@@ -1,7 +1,6 @@
 import React from 'react';
 import ArtistBox from './ArtistBox'
 // import ArtistDetailView from './ArtistDetailView';
-import { navigate } from 'react-navigation';
 import {
   FlatList,
   TouchableOpacity,
@@ -12,19 +11,19 @@ export default class ArtistList extends React.Component {
   handlePress(item) {
 
     console.warn('artist', item)
-    navigate('ArtistDetailView')
+    // this.props.navigation('ArtistDetailView', {item})
+    navigation.navigate('Detail',{ artist:'artist' }) 
   }
-
+  
   render() {
-   
+    const { navigation } = this.props;
     return (
-
       <FlatList
       data={this.props.artists}
       renderItem={({item}) =>{
         return (
-            <TouchableOpacity 
-                  onPress={ () =>  this.handlePress(item)}>
+            <TouchableOpacity
+                  onPress={ () => handlePress(item)   }>
                 <ArtistBox artist={item}  />
             </TouchableOpacity>
           )

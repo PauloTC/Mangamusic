@@ -11,7 +11,7 @@ const App = StackNavigator({
         header: null,
       },
     },
-    ArtistDetailView: {
+    Detail: {
       screen: ArtistDetailView,
     }
 	});

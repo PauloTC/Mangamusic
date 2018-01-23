@@ -27,13 +27,15 @@
 		}
 	
 		render() {
+
+			const { navigation } = this.props;
 				// console.warn('data', this.state.artists )
 	
 				const artists = this.state.artists
 	
 				return (
 					<View style={styles.container} >
-						<ArtistList artists={artists}  />
+						<ArtistList  navigation={navigation}  artists={artists}  />
 					</View>
 	
 				);

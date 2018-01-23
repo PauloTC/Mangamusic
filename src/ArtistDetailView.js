@@ -5,7 +5,8 @@ import {getArtists } from './api-client'
 
 import { 
 	StyleSheet, 
-	View, 
+	View,
+	Text
 } from 'react-native';
 
 export default class ArtistDetailView extends React.Component {
@@ -13,11 +14,12 @@ export default class ArtistDetailView extends React.Component {
 
 	render() {
 
-			const artist = this.state.artist
+			// const artist = this.state.artist
 
 			return (
 				<View style={styles.container} >
-					<ArtistBox artist={artist}  />
+					{/* <ArtistBox artist={artist}  /> */}
+					<Text>Cambio de pantalla</Text>
 				</View>
 
 			);
