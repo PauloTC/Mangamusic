@@ -14,12 +14,11 @@ export default class ArtistDetailView extends React.Component {
 
 	render() {
 
-			// const artist = this.state.artist
+			const artist = this.props.navigation.state.params.item
 
 			return (
 				<View style={styles.container} >
-					{/* <ArtistBox artist={artist}  /> */}
-					<Text>Cambio de pantalla</Text>
+					<ArtistBox artist={artist}  />
 				</View>
 
 			);

@@ -10,20 +10,19 @@ export default class ArtistList extends React.Component {
 
   handlePress(item) {
 
-    console.warn('artist', item)
-    // this.props.navigation('ArtistDetailView', {item})
-    navigation.navigate('Detail',{ artist:'artist' }) 
+    const { navigation } = this.props;
+    // console.warn('artist', item)
+    navigation.navigate('Detail',{item})
   }
   
   render() {
-    const { navigation } = this.props;
     return (
       <FlatList
       data={this.props.artists}
       renderItem={({item}) =>{
         return (
             <TouchableOpacity
-                  onPress={ () => handlePress(item)   }>
+                  onPress={ () =>  this.handlePress(item)  }>
                 <ArtistBox artist={item}  />
             </TouchableOpacity>
           )
