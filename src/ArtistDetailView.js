@@ -28,7 +28,6 @@ export default class ArtistDetailView extends React.Component {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: 'lightgray',
-		paddingTop: 50,
+		backgroundColor: 'lightgray'
 	},
 });

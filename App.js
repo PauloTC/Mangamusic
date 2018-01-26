@@ -1,6 +1,7 @@
 import { StackNavigator } from 'react-navigation';
 import HomeView from './src/HomeView'
 import ArtistDetailView from './src/ArtistDetailView'
+import { Platform } from 'react-native'
 
 
 

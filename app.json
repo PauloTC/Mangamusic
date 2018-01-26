@@ -1,5 +1,15 @@
 {
   "expo": {
-    "sdkVersion": "23.0.0"
-  }
+    "name": "Mangamusic",
+    "icon": "./media/logo.png",
+    "version": "1.0.0",
+    "slug": "manga-music",
+    "sdkVersion": "23.0.0",
+    "ios": {
+      "bundleIdentifier": "com.yourcompany.yourappname"
+    },
+    "android": {
+      "package": "com.yourcompany.yourappname"
+    }
+   }
 }
